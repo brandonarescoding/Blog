@@ -10,15 +10,10 @@ const app = express();
 // Configuration du moteur de template
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+console.log(path.join(__dirname, 'public'));
 // Congiguration du server static
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 // Configuration des sessions
-app.use(session({
-    secret: '677024960',
-    resave: false,
-    saveUninitialized: true
-}));
 
 // importation des controllers
 const indexController = require('./controllers/indexController');
@@ -30,7 +25,7 @@ app.use('/', indexController);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Demarrage du server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log( `Server is running on port ${PORT}`);
 });

@@ -3,9 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exemple avec Bootstrap</title>
+    <!-- Vous n'avez pas besoin d'inclure les liens CDN pour Bootstrap ici -->
+    <!-- Les fichiers Bootstrap sont déjà inclus via les modules importés -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- Autres fichiers CSS -->
 </head>
 <body>
-    <p>Configuration terminee. </p>
+    <header class="hero text-center py-5">
+        <div class="container">
+            <h1 class="title display-4">Bienvenue sur le Blog d'Échange</h1>
+            <p class="description lead">Connectez-vous et échangez des messages avec d'autres utilisateurs.</p>
+            <a href="/auth/login" class="btn btn-primary btn-lg">Se Connecter</a>
+        </div>
+    </header>
+
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Nouveau Message</h2>
+                        <p class="card-text">Partagez vos idées et opinions avec la communauté.</p>
+                        <a href="#" class="btn btn-secondary">En savoir plus <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Groupes</h2>
+                        <p class="card-text">Rejoignez des groupes pour discuter de sujets spécifiques.</p>
+                        <a href="#" class="btn btn-secondary">En savoir plus <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Chat Privé</h2>
+                        <p class="card-text">Communiquez en privé avec d'autres membres.</p>
+                        <a href="#" class="btn btn-secondary">En savoir plus <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center py-4">
+        <div class="container">
+            <p>&copy; 2023 Blog d'Échange. Tous droits réservés.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Accueil</a></li>
+                <li class="list-inline-item"><a href="#">À Propos</a></li>
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+                <li class="list-inline-item"><a href="#">Politique de Confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+
+<script src="/scripts/bootstrap.min.js"></script>
 </body>
 </html>
