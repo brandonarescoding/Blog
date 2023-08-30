@@ -11,6 +11,8 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// Congiguration du server static
+app.use(express.static('public'));
 // Configuration des sessions
 app.use(session({
     secret: '677024960',
