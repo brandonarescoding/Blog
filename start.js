@@ -10,6 +10,7 @@ const app = express();
 // Configuration du moteur de template
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
 console.log(path.join(__dirname, 'public'));
 // Congiguration du server static
 app.use(express.static(path.join(__dirname, 'public')));
